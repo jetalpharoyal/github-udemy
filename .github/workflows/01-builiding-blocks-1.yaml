@@ -1,0 +1,19 @@
+name: 01-building-blocks-1
+
+on: push
+
+jobs:
+    job1: 
+        runs-on: ubuntu-latest
+        steps:
+            - name: first job
+              run: "Hello World Angshuman"
+
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: second job
+              run: "Hello Family"
+              
+
+        
