@@ -7,13 +7,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: first job
-              run: "Hello World Angshuman"
+              run: echo "Hello World Angshuman"
 
     job2:
         runs-on: ubuntu-latest
         steps:
             - name: second job
-              run: "Hello Family"
+              run: echo "Hello Family"
               
 
         
