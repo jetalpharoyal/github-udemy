@@ -8,10 +8,16 @@ on:
             debug1:
                 type: boolean
                 default: false
-    
+env:
+    MY_WF: 'WF1'
+    MY_OWF: 'OWF1'  
 jobs:
     echo-data:
         runs-on: ubuntu-latest
+        env:
+            MY_J_WF: 'WF2'
+            MY_OWF: 'OWF2'  
+
         steps:
             - name: Display Information
               run: |
@@ -25,3 +31,7 @@ jobs:
             - name: Retrieve Var
               run: |
                 echo "Var value ${{vars.My_VAR}}"
+            - name: MY_ENV
+              run: |
+                echo "WF ${{env.MY_WF}}"
+                echo "OWF ${{env.MY_OWF}}"
